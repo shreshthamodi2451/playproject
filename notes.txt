@@ -1,0 +1,6 @@
+npm init
+
+readme.md
+
+public folder
+--temp fil
