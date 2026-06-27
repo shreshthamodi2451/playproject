@@ -3,4 +3,25 @@ npm init
 readme.md
 
 public folder
---temp fil
+--temp folder
+    --.gitkeep
+
+.gitignore
+
+src
+--controllers, db, middlewares, models, routes, utils, app.js, constants.js, index.js
+
+
+npm i -D prettier
+.prettierrc
+.prettierignore
+
+database connection and problems
+
+.env file mongo_uri
+
+install mongoose express dotenv
+
+wrap in try ctach or fetch
+always put async await 
+use iffe 
