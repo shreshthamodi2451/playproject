@@ -27,6 +27,8 @@ always put async await
 use iffe 
 
 
+
+set utils
 any data coming from url comes from params
 
 
@@ -43,3 +45,15 @@ check if user is logged in (middleware) can add multiple middlewares
 err, req, res, next
 
 next is for middleware to go to next middleware
+
+
+
+video 10
+in models
+user.model.js 
+video.model.js
+
+make the database
+
+install bcrypt to hash passwords
+jwt to make tokens, cryptography
