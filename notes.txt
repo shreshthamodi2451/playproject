@@ -25,3 +25,21 @@ install mongoose express dotenv
 wrap in try ctach or fetch
 always put async await 
 use iffe 
+
+
+any data coming from url comes from params
+
+
+cookie-parser
+cors setting for cors //how to connect be wid fe video
+middleware or configurstion through app.use
+
+
+middleware
+/instagram
+->
+check if user is logged in (middleware) can add multiple middlewares
+->
+err, req, res, next
+
+next is for middleware to go to next middleware
