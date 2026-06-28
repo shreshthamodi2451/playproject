@@ -57,3 +57,76 @@ make the database
 
 install bcrypt to hash passwords
 jwt to make tokens, cryptography
+
+
+multer takes files from user
+cloudinary is storage
+multer->local storage->cloudinary
+
+
+file system
+files are lineked and unlinked 
+
+middleware using multer
+
+
+
+// //with asynchandler i dont have to write try catch in my controllers Controller
+
+// ↓
+
+// Error
+
+// ↓
+
+// asyncHandler catches it
+
+// ↓
+
+// Express Error Middleware
+
+// ↓
+
+// Proper JSON response
+
+// const registerUser = asyncHandler(async (req, res) => {
+
+//     // Your code
+
+// });
+// **asyncHandler is a wrapper function that automatically catches errors thrown inside asynchronous Express route handlers and forwards them to Express's error-handling middleware using next(error), eliminating the need to write try...catch in every controller.`
+
+
+controllers and router
+
+// A controller is a function that receives an API request, performs the required business logic, and sends a response.
+
+// Think of it as the manager of an API endpoint.
+The controller decides:
+
+What data to read from the request
+What database queries to run
+What validations to perform
+What response to send back
+
+
+routes are imported in app.js
+app.js: This file creates and configures the Express application.
+Think of app.js as the file that builds your Express application by putting all the pieces together.
+
+index.js
+
+This file starts the application.
+Its job is:
+
+Connect to MongoDB
+Start the server
+
+cookie-parser is Express middleware that parses the Cookie header sent by the browser and makes individual cookies available as req.cookies, so your backend can easily read values like authentication tokens or user preferences.
+
+Method	Meaning
+GET	Read data
+POST	Create new data
+PUT	Replace existing data
+PATCH	Update part of existing data
+DELETE	Delete data
