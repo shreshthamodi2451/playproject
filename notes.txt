@@ -130,3 +130,9 @@ POST	Create new data
 PUT	Replace existing data
 PATCH	Update part of existing data
 DELETE	Delete data
+
+to register a user
+get user details from frontend
+
+for filehandling go to routes
+multer middleware is used, its imported in routes
