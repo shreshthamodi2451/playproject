@@ -136,3 +136,64 @@ get user details from frontend
 
 for filehandling go to routes
 multer middleware is used, its imported in routes
+
+register flow
+Frontend Form
+
+        │
+        ▼
+POST Request
+
+        │
+        ▼
+Express
+
+        │
+        ▼
+Multer Middleware
+
+        │
+        ├──────────────► req.body
+        │                 │
+        │                 ├── fullName
+        │                 ├── email
+        │                 ├── username
+        │                 └── password
+        │
+        └──────────────► req.files
+                          │
+                          ├── avatar
+                          └── coverImage
+                                │
+                                ▼
+                      Saved in public/temp
+
+                                │
+                                ▼
+                        registerUser()
+
+                                │
+                                ▼
+                     uploadOnCloud()
+
+                                │
+                                ▼
+                      Cloudinary URL
+
+                                │
+                                ▼
+                        User.create()
+
+                                │
+                                ▼
+                           MongoDB
+
+//refresh token is a long lived token which is used to generate a new access token when the access token expires, it is sent in the authorization header of the request, and it is verified by the backend to check if the user is authenticated or not. if the token is valid then the user is authenticated and can generate a new access token, otherwise the user is not authenticated and cannot generate a new access token. so we generate a refresh token for the user when he logs in or registers, and send it to the frontend, which will store it in local storage or cookies and send it in the authorization header of the request to generate a new access token when the access token expires. so we need to generate a refresh token for the user when he logs in or registers, and send it to the frontend, which will store it in local storage or cookies and send it in the authorization header of the request to generate a new access token when the access token expires.
+
+//access token is a short lived token which is used to access the protected routes, it is sent in the authorization header of the request, !!!and it is verified by the backend to check if the user is authenticated or not.!!! if the token is valid then the user is authenticated and can access the protected routes, otherwise the user is not authenticated and cannot access the protected routes. so we generate an access token for the user when he logs in or registers, and send it to the frontend, which will store it in local storage or cookies and send it in the authorization header of the request to access the protected routes. so we need to generate an access token for the user when he logs in or registers, and send it to the frontend, which will store it in local storage or cookies and send it in the authorization header of the request to access the protected routes.
+
+
+IMPORTANT ERRORS:
+A ReferenceError means:
+
+You're using a variable that JavaScript cannot find because it hasn't been declared or it's outside the scope where you're trying to use it.
