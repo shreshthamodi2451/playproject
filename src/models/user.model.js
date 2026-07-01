@@ -63,7 +63,7 @@ const userSchema= new Schema(
 //pre is used here because we want to hash the password before saving it to the database, so we use pre save middleware to hash the password before saving it to the database. if we use post save middleware then the password will be saved in plain text and then we will hash it which is not what we want. so we use pre save middleware to hash the password before saving it to the database.
 userSchema.pre("save", async function () {
 
-    if(!this.isModified("password")) return next();
+    if(!this.isModified("password")) return;
 
     this.password=await bcrypt.hash(this.password, 10)
     // next();

@@ -197,3 +197,44 @@ IMPORTANT ERRORS:
 A ReferenceError means:
 
 You're using a variable that JavaScript cannot find because it hasn't been declared or it's outside the scope where you're trying to use it.
+
+
+LOGOUT flow
+User clicks Logout
+
+        │
+        ▼
+verifyJWT
+
+        │
+        ▼
+req.user available
+
+        │
+        ▼
+findByIdAndUpdate()
+
+        │
+        ▼
+Remove refreshToken from MongoDB
+
+        │
+        ▼
+clearCookie("accessToken")
+
+        │
+        ▼
+clearCookie("refreshToken")
+
+        │
+        ▼
+Send 200 OK
+
+        │
+        ▼
+User is logged out
+
+
+with access and refresh token user wont have to enter details agiana nd again 
+access token is short lived
+refresh token is in db and if acccess token is gone then , we need to set an endpoint
