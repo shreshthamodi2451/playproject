@@ -261,3 +261,5 @@ Here's the entire JWT authentication flow condensed into **10 clear steps**:
 9. If valid, the server **rotates the refresh token**: it generates a **new Access Token and a new Refresh Token**, stores the new Refresh Token in MongoDB, sends both back to the browser, and the old Refresh Token becomes invalid.
 
 10. The user is forced to log in again only if they **explicitly log out** (refresh token removed from the database and cookies cleared), the **Refresh Token expires**, or the Refresh Token sent by the client **doesn't match** the one stored in MongoDB (stolen/old/reused token). This is what actually ends the session.
+
+whenever interacting with db use await
